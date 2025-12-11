@@ -27,6 +27,7 @@ public class Reverzovani {
         StringBuffer sb1 = sb;
         sb1.reverse();
         System.out.println(sb1.toString());
+
     }
 
     public void slovoReverzor(){
@@ -38,8 +39,9 @@ public class Reverzovani {
         int counter = 0;
         while (true){
             if (sb2.indexOf(" ") != 1){
-                StringBuffer sb3 = new StringBuffer(sb2.substring(cislo, sb2.indexOf(" ")));
                 cislo =  sb2.indexOf(" ");
+                StringBuffer sb3 = new StringBuffer(sb2.substring(cislo, sb2.indexOf(" ", cislo)));
+
                 sb3.reverse();
 
                 if (counter != 0){
@@ -51,9 +53,9 @@ public class Reverzovani {
                 counter++;
             }
 
-
-
-            break;
+            else{
+                break;
+            }
         }
 
         sb4.append(sb5);

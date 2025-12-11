@@ -8,12 +8,14 @@ public class Analizer {
         int pocetCisel = 0;
         int pocetSlov = 1;
         int pocetVet = 0;
-        for (int j=0;j<text.length()-1;j++){
+
+        for (int j = 0;j < text.length();j++){
             char ch = text.charAt(j);
 
             if (Character.isDigit(ch)){
                 pocetCisel++;
-            } else if (Character.isAlphabetic(ch)) {
+            }
+            else if (Character.isAlphabetic(ch)) {
                 pocetPismen++;
                 if (Character.isUpperCase(ch)){
                     pocetVelkych++;
@@ -23,10 +25,10 @@ public class Analizer {
                 }
 
             }
-
-
-
         }
+
+        //System.out.println("Weeee");
+
         int cislo = 0;
         while (true){
             if (text.indexOf(".", cislo) != -1 || text.indexOf("!", cislo) != -1 ||  text.indexOf("?", cislo) != -1){
@@ -50,18 +52,25 @@ public class Analizer {
             }
         }
 
+        //System.out.println("Woooo");
+
         int cislo2 = 0;
         while (true){
             if (text.indexOf(" ", cislo2) != -1){
                 if (text.indexOf(" ", cislo2) != 0) {
-                    cislo = text.indexOf(" ", cislo2)+1;
+                    cislo2 = text.indexOf(" ", cislo2)+1;
                     pocetSlov++;
+
                 }
             }
             else{
                 break;
             }
         }
+
+        //System.out.println("Waaaa");
+
+        System.out.println(text);
 
         System.out.println("Počet písmen: " + pocetPismen);
         System.out.println("Počet Velkých písmen: " + pocetVelkych + ", počet malých: " + pocetMalich);

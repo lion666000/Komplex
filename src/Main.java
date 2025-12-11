@@ -5,17 +5,20 @@ public class Main {
 
         testovani.string();
         testovani.buff();
-
+*/
 
         Reverzovani reverzovani = new Reverzovani();
         reverzovani.zadani();
         reverzovani.vetaReverzor();
-        reverzovani.slovoReverzor();
+        //reverzovani.slovoReverzor();
 
-         */
 
+
+        /*
         Analizer analizer = new Analizer();
 
         analizer.anal();
+
+         */
     }
 }
